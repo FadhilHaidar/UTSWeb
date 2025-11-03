@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tracking - Toko Buku Classic</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/style/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="container">
+    <a class="brand" href="../dashboard/dashboard.html"><img src="../asset/logo/logo.png" alt="logo"><div style="line-height:1;"><div style="font-size:18px">Toko Buku</div><div class="small">Classic Store</div></div></a>
+    <div><a href="../dashboard/dashboard.html" class="btn-outline">Kembali</a></div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <h3 class="h3">Tracking Pengiriman</h3>
+    <p class="muted">Masukkan nomor Delivery Order untuk melihat status.</p>
+    <div class="input-group my-3">
+      <input id="doNumber" class="form-control" placeholder="Masukkan Nomor DO (contoh: 20230012)">
+      <button class="btn-primary" id="searchDO">Cari</button>
+    </div>
+
+    <div id="trackingResult" style="display:none;">
+      <h4 id="trackName" class="h4"></h4>
+      <p class="small muted">Ekspedisi: <span id="trackEkspedisi"></span> | Tanggal: <span id="trackTanggal"></span></p>
+      <div class="progress my-2" style="height:12px;">
+        <div id="trackProgress" class="progress-bar" role="progressbar" style="width:0%">0%</div>
+      </div>
+      <ul id="trackList" class="list-group mt-2"></ul>
+    </div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toastWrapTrack"></div>
+
+<script src="../js/data/data.js"></script>
+<script src="../js/script/script-v2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

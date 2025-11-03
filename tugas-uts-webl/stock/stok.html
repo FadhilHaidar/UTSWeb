@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Katalog - Toko Buku Classic</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/style/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="container">
+    <a class="brand" href="../dashboard/dashboard.html"><img src="../asset/logo/logo.png" alt="logo"><div style="line-height:1;"><div style="font-size:18px">Toko Buku</div><div class="small">Classic Store</div></div></a>
+    <div><a href="../dashboard/dashboard.html" class="btn-outline">Kembali</a></div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <h3 class="h3">Katalog Buku</h3>
+        <p class="muted">Semua buku tersedia dari data dummy.</p>
+      </div>
+      <div>
+        <button class="btn-primary" id="addStockBtn">Tambah Stok Baru</button>
+      </div>
+    </div>
+
+    <div class="catalog-grid mt-3" id="catalogGrid"></div>
+  </div>
+</div>
+
+<!-- modal add -->
+<div class="modal fade" id="modalAddStock" tabindex="-1"><div class="modal-dialog"><div class="modal-content p-3"><h5>Tambah Stok Baru</h5><input id="newKode" class="form-control mb-2" placeholder="Kode"><input id="newNama" class="form-control mb-2" placeholder="Nama"><input id="newStok" class="form-control mb-2" placeholder="Stok" type="number"><input id="newHarga" class="form-control mb-2" placeholder="Harga"><input id="newCover" class="form-control mb-2" placeholder="Path cover (contoh: ../img/my.jpg)"><div class="text-end"><button class="btn-outline" data-bs-dismiss="modal">Batal</button><button class="btn-primary" id="saveNewStock">Simpan</button></div></div></div></div>
+
+<div class="toast-wrap" id="toastWrapStock"></div>
+
+<script src="../js/data/data.js"></script>
+<script src="../js/script/script-v2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
